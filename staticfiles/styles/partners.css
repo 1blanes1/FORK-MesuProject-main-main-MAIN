@@ -1,0 +1,69 @@
+#partners-wrapper {
+    background: #9ca3af !important;
+    border-radius: 24px;
+    padding: 40px 30px !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    margin: 20px 0;
+}
+
+#partners-wrapper .organizer-card {
+    transition: all 0.3s ease;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#partners-wrapper .organizer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+#partners-wrapper .organizer-logo {
+    transition: transform 0.3s ease;
+    max-width: 150px;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+#partners-wrapper .organizer-card:hover .organizer-logo {
+    transform: scale(1.08);
+}
+
+#partners-wrapper h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+#partners-wrapper p {
+    color: #050505;
+    margin: 0;
+}
+
+.partner-link {
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    #partners-wrapper {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+        padding: 30px 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #partners-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        padding: 25px 15px !important;
+    }
+    
+    #partners-wrapper .organizer-card:hover {
+        transform: none;
+    }
+}
